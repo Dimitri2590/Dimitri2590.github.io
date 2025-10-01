@@ -1,0 +1,486 @@
+body {
+    background-color: #151925!important;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    color: #ffffff!important;
+}
+
+#a-propos h2 {
+    margin: 0;
+    color: #ffffff!important;
+    text-align: center;
+}
+
+#projet h2 {
+    margin: 0;
+    color: #ffffff!important;
+    text-align: center;
+}
+
+#projet img {
+    width: 80%;
+    height: 80%;
+}
+
+#Veille-technologique h2 {
+    margin: 0;
+    color: #ffffff!important;
+    text-align: center;
+}
+
+#Compétences h2 {
+    margin: 0;
+    color: #ffffff!important;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 14em;
+    margin-right: 9em;
+    color: white!important;
+}
+
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    margin: 1em 2em;
+    position: static;
+}
+
+.four .type {
+    padding: 2rem 1rem;
+    width: auto;
+    margin-right: 8rem;
+}
+
+.four p {
+    width: 88ch;
+    border-right: 4px solid black;
+    margin-right: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#nav {
+    display: flex;
+    gap: 30px;
+}
+
+#nav a {
+    color: #8c85ff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    text-align: left;
+    margin: 50px 100px;
+}
+
+.intro h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.intro h3 {
+    font-size: 1.2rem;
+    color: #8c85ff;
+}
+
+.highlight {
+    color: #8c85ff;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-right: 10%;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #8c85ff;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 50px;
+    margin-top: -600px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+footer small, footer a {
+    font-size: 1em;
+    color: #ffffff;
+    padding: 1px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.cv-button, .contact-button {
+    text-decoration: none;
+    color: white;
+    background-color: #8c85ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover, .contact-button:hover {
+    background-color: #6a63d1;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #8c85ff, #6a63d1);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    bottom: -0%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #6a63d1, #8c85ff);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+#a-propos p {
+    margin-top: 150px;
+}
+
+
+
+#a-propos img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin-left: 43%;
+    margin-top: 50px;
+}
+
+#a-propos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.crédits {
+    text-align: center;
+    margin: 25px 25px;
+}
+
+.crédits h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.crédits button {
+    padding: 10px 20px;
+    background-color: #8c85ff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.crédits button:hover {
+    background-color: #6a63d1;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .intro, .socials, .contact {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .profile {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .four p {
+        font-size: 1rem;
+        width: auto;
+    }
+
+    .erreur {
+        width: 750px;
+        left: 0.5%;
+        bottom: 20%;
+        position: fixed;
+    }
+    
+    #moto {
+        color: white;
+        font-family: 'Inter', sans-serif;
+        margin-left: 61%;
+        margin-top: -3%;
+    }
+    
+    .bikedle {
+        width: 750px;
+        right: 0.5%;
+        bottom: 20%;
+        position: fixed;
+    }
+
+    #watchlist {
+        color: white;
+        font-family: 'Inter', sans-serif;
+        margin-left: 61%;
+        margin-top: -8%;
+    }
+
+    .watchlist {
+        width: 750px;
+        right: 0.5%;
+        bottom: 20%;
+        position: fixed;
+    }
+}
+
+#Compétences img {
+    width: 80%;
+    height: 80%;
+    max-width: 600px;
+    margin-top: 300px;
+}
+
+.carousel-logo {
+    max-height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+ .carousel-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carousel-logo {
+    height: 200px;
+    object-fit: contain;
+    margin: auto;
+}
+
+#Veille-technologique {
+  margin-top: 40px; 
+}
+
+.carousel-veille {
+  width: 80%;
+  margin: auto;
+}
+
+.carousel-veille-img {
+  max-height: 250px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
+
+
+.carousel-link {
+  display: inline-block; 
+}
+
+
+#Onenote p {
+    margin-top: 5%;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+}
+
+
+.language-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.language-switch img {
+    width: 50px; 
+    height: auto;
+}
+
+#experience {
+    padding: 60px 20px;
+    text-align: center;
+}
+#experience h2 {
+    margin: 0;
+    color: #ffffff!important;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.experience-logo {
+    flex: 0 0 120px;
+    text-align: center;
+}
+.experience-logo img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.experience-logo img:hover {
+    transform: scale(1.1);
+}
+.experience-content {
+    flex: 1;
+    text-align: left;
+}
+.experience-content h3 {
+    color: #8c85ff;
+    margin: 0 0 5px 0;
+}
+.experience-content .date {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+}
+.experience-content .description {
+    color: #ddd;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .experience-content {
+        text-align: center;
+    }
+}
+

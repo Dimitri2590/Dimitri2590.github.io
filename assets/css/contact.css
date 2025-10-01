@@ -1,0 +1,138 @@
+#nav a {
+    color: #8c85ff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background-color: #151925;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #8c85ff, #6a63d1);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #6a63d1, #8c85ff);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+form {
+    /* On centre le formulaire */
+    margin: 0 auto;
+    width: 400px;
+    /* Le contour du formulaire */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Taille et alignement uniformes */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  
+
+  input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+    vertical-align: top;
+    height: 5em;
+    font: 1em sans-serif;
+  }
+  
+  input[type=submit] {
+    color: #8c85ff;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 0.5em;
+    box-shadow: 5px 3px 3px #8c85ff;
+}
+  
+    input[type=submit]:hover {
+    background-color: #6a63d1;
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.281);
+    color: #ffffff;
+    padding: 5px;
+    box-shadow: 0 -4px 6px rgba(197, 197, 197, 0.1);
+    margin-top: 40%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+   
+  footer small, footer a {
+    font-size: 1em;
+    color: #ffffff;
+    padding: 3px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
