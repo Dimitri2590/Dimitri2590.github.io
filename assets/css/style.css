@@ -86,7 +86,7 @@ header h1 {
 }
 
 /* Intro Section */
-.intro {
+#intro {
     padding: 80px 100px;
     display: flex;
     flex-direction: column;
