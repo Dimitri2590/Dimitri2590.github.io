@@ -10,6 +10,7 @@ Bienvenue sur le dépôt de mon portfolio personnel. Ce site a été conçu pour
 Passionné d'informatique et baignant dans ce milieu depuis mon enfance, j'ai orienté mes études vers le développement d'applications. Ce portfolio centralise mes travaux, ma veille technologique et mon expérience professionnelle.
 
 ## ✨ Fonctionnalités du site & Sections
+- **Design Web** : Interface moderne, thème sombre et animations fluides (animations au défilement, splash screen immersif).
 - **Accueil** : Présentation dynamique.
 - **À propos** : Mon profil et téléchargement de mon CV.
 - **Mes Projets** : Showcase de mes réalisations académiques et personnelles.
@@ -67,4 +68,4 @@ N'hésitez pas à me retrouver sur mes réseaux professionnels :
 - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/Dimitri2590)
 
 ---
-*© 2025 Dimitri DEMONT - Tous droits réservés.*
+*© 2026 Dimitri DEMONT - Tous droits réservés.*

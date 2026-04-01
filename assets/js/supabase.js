@@ -41,13 +41,12 @@ function renderArticles(articles) {
     const container = document.getElementById('veille-container')
     if (!container) return
 
-    container.innerHTML = '' // Clear loading state
+    container.innerHTML = ''
 
     articles.forEach(article => {
         const card = document.createElement('div')
         card.className = 'article-card'
 
-        // Ensure link is absolute and sanitized
         let link = article.Lien || '#'
         if (typeof link === 'string') {
             link = link.trim().replace(/^["']|["']$/g, ''); // Remove whitespace and quotes

@@ -1,14 +1,32 @@
-// Bootstrap 5 handles the carousel automatically via data attributes.
-// We only need custom JS if we want specific behavior not covered by data attributes.
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize carousels if needed, though data-bs-ride="carousel" usually suffices.
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function (carousel) {
-        new bootstrap.Carousel(carousel, {
-            interval: 5000, // Slower speed (5 seconds)
-            wrap: true
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 2000);
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); 
+            }
         });
+    }, observerOptions);
+
+    const hiddenElements = document.querySelectorAll('.animate-on-scroll');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
     });
 });
 
