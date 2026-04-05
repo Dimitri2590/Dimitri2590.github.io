@@ -33,3 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
 function switchToEnglish() {
     window.location.href = "../public/indexen.php";
 }
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('#nav a').forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+}
