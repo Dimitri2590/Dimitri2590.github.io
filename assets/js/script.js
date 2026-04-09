@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); 
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -50,3 +50,68 @@ if (hamburger) {
         });
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const progressCircle = document.querySelector('.progress_circle');
+    
+    if (progressCircle) {
+        progressCircle.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', handleScroll);
+
+        function handleScroll() {
+            const height = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const position = window.scrollY;
+            const trackLength = height - windowHeight;
+            const percentage = trackLength > 0 ? Math.floor((position / trackLength) * 100 + 1) : 0;
+
+            progressCircle.style.background = `conic-gradient(var(--primary-color) ${percentage}%, rgba(255, 255, 255, 0.05) ${percentage}%)`;
+        }
+
+        handleScroll();
+    }
+});
+
+
+
+// async function GetProject() {
+//     const url = "https://api.github.com/users/Dimitri2590/repos";
+
+//     try {
+//         const response = await fetch(url);
+//         if (!response.ok) {
+//             throw new Error(`Statut de réponse : ${response.status}`);
+//         }
+//         const resultat = await response.json();
+
+//         const projectContainer = document.getElementById("projet");
+//         projectContainer.innerHTML = "";
+
+//         resultat.forEach(repo => {
+//             const card = document.createElement("div");
+//             card.className = "project-item animate-on-scroll fade-in-up";
+
+//             const content = document.createElement("div");
+//             content.className = "project-content";
+
+//             content.innerHTML = `
+//                 <h3>${repo.name}</h3>
+//                 <p>${repo.description ?? "Pas de description"}</p>
+//                 <a href="${repo.html_url}" target="_blank">Voir le projet</a>
+//             `;
+
+//             card.appendChild(content);
+//             projectContainer.appendChild(card);
+//         })
+//     } catch (Erreur) {
+//         console.error(Erreur.message);
+//     }
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     GetProject();
+// }) 

@@ -443,7 +443,8 @@ body::after {
         padding: 40px 10px;
     }
 
-    .intro-text h2, .intro-text h1 {
+    .intro-text h2,
+    .intro-text h1 {
         text-align: center;
     }
 
@@ -568,28 +569,55 @@ body::after {
 }
 
 .intro-spline {
-  flex: 1 1 400px;
-  min-height: 500px;
+    flex: 1 1 400px;
+    min-height: 500px;
 }
 
 .intro-spline iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-  border-radius: 20px;
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 20px;
 }
 
-.intro-text h1, .intro-text h2, .intro-text .socials, .wrapper.four {
+.intro-text h1,
+.intro-text h2,
+.intro-text .socials,
+.wrapper.four {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-body.loaded .intro-text > h2:first-child { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-body.loaded .intro-text > h1 { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
-body.loaded .intro-text > h2:nth-child(3) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
-body.loaded .intro-text > .socials { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
-body.loaded .wrapper.four { transition-delay: 0.9s; opacity: 1; transform: translateY(0); }
+body.loaded .intro-text>h2:first-child {
+    transition-delay: 0.1s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .intro-text>h1 {
+    transition-delay: 0.3s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .intro-text>h2:nth-child(3) {
+    transition-delay: 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .intro-text>.socials {
+    transition-delay: 0.7s;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.loaded .wrapper.four {
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .animate-on-scroll {
     opacity: 0;
@@ -704,11 +732,19 @@ body.scrolled header {
 }
 
 @keyframes pulse-bg {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
-body::before, body::after {
+body::before,
+body::after {
     animation-name: float, pulse-bg;
     animation-duration: 8s, 4s;
     animation-iteration-count: infinite, infinite;
@@ -717,11 +753,11 @@ body::before, body::after {
 
 #splash-screen {
     position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    background-color: #0b0d14; 
+    background-color: #0b0d14;
     z-index: 99999;
     display: flex;
     align-items: center;
@@ -759,17 +795,64 @@ body::before, body::after {
 }
 
 @keyframes splashText {
-    to { 
-        opacity: 1; 
-        transform: translateY(0); 
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes splashLine {
-    to { width: 150px; }
+    to {
+        width: 150px;
+    }
 }
 
 body.loaded #splash-screen {
     transform: translateY(-100%);
     pointer-events: none;
+}   
+
+.progress_circle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 9999;
+    background: conic-gradient(var(--primary-color) 0%, rgba(255, 255, 255, 0.05) 0%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress_circle::before {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+}
+
+.progress_circle::after {
+    content: '↑';
+    position: absolute;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.progress_circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(140, 133, 255, 0.3);
+}
+
+.progress_circle:hover::after {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
