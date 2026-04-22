@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary-color: #8c85ff;
     --secondary-color: #6a63d1;
     --bg-color: #151925;
@@ -20,6 +20,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     position: relative;
+    cursor: url("../images/pngegg.png"), auto;
 }
 
 h1,
@@ -810,7 +811,7 @@ body::after {
 body.loaded #splash-screen {
     transform: translateY(-100%);
     pointer-events: none;
-}   
+}
 
 .progress_circle {
     position: fixed;
