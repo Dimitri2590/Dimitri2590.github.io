@@ -162,7 +162,9 @@ header h1 {
 .project-image img {
     width: 100%;
     max-width: 100%;
+    max-height: 350px;
     height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
@@ -170,6 +172,11 @@ header h1 {
 
 .project-image img:hover {
     transform: scale(1.02);
+}
+
+img.watchlist {
+    max-height: 350px;
+    object-fit: contain;
 }
 
 #projet h2 {
@@ -288,6 +295,13 @@ header h1 {
     gap: 30px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+#experience > h3 {
+    margin: 4rem 0 2rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    padding-left: 20px;
 }
 
 .experience-item {
