@@ -166,8 +166,13 @@
 
     <section id="Veille-technologique">
       <h2>Veille technologique</h2>
+
+      <div class="veille-filters animate-on-scroll fade-in-up">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+      </div>
+
       <div id="veille-container" class="veille-grid">
-        <div class="text-center">Chargement des articles...</div>
+        <div class="text-center w-100 placeholder-loading">Chargement des articles...</div>
       </div>
     </section>
 
@@ -334,6 +339,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/veille.js"></script>
     <script type="module" src="assets/js/supabase.js"></script>
 </body>
 
