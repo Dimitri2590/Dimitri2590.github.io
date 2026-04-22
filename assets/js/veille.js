@@ -84,14 +84,25 @@ function renderArticles(articlesData) {
 
         let link = article.lien || '#';
 
+        const imageHtml = article.image 
+            ? `<img src="${article.image}" alt="Image illustrant ${article.titre}" loading="lazy" class="article-image">`
+            : `<div class="article-image-placeholder">&lt;/&gt;</div>`;
+
         card.innerHTML = `
-            ${article.image ? `<div class="article-image-container"><img src="${article.image}" alt="Image illustrant ${article.titre}" loading="lazy" class="article-image"></div>` : ''}
-            <div class="article-content">
+            <div class="article-image-container">
+                ${imageHtml}
                 <span class="article-category">${article.categorie}</span>
+            </div>
+            <div class="article-content">
                 <h3 class="article-title">${article.titre}</h3>
-                <p class="article-date">${article.date !== "Inconnue" ? new Date(article.date).toLocaleDateString('fr-FR') : "Date inconnue"}</p>
+                <p class="article-date">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    ${article.date !== "Inconnue" ? new Date(article.date).toLocaleDateString('fr-FR') : "Date inconnue"}
+                </p>
                 <p class="article-resume">${article.resume}</p>
-                <a href="${link}" target="_blank" rel="noopener noreferrer" class="article-link">Lire l'article</a>
+                <div class="article-footer">
+                    <a href="${link}" target="_blank" rel="noopener noreferrer" class="article-link">Lire l'article <span class="arrow">→</span></a>
+                </div>
             </div>
         `;
         container.appendChild(card);
